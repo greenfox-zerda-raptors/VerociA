@@ -1,0 +1,14 @@
+.yellowbox{
+  color: blue;
+  font-size: 30px;
+  padding: 4px 20px 3px 20px;
+  background-color: yellow;
+  border: 5px solid black;
+  margin: 0 20px 0 20px;
+}
+
+.greenbox{
+  background-color: green;
+  margin:10px 75% 10px 10px;
+  padding: 20px 0
+}

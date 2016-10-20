@@ -1,0 +1,14 @@
+.text{
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px 80% 10px 20px;
+  font-family:sans-serif;
+  background-image:url(https://github.com/greenfox-academy/teaching-materials/raw/master/tools-and-coding/html-css/duck.png);
+  background-repeat: no-repeat;
+}
+
+h1{
+  margin:10px 80% 10px 10px;
+  padding: 20px 12px;
+}

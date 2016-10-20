@@ -1,0 +1,29 @@
+h1{
+  color: blue;
+}
+
+h3{
+  color: orange;
+}
+
+#Elso{
+  color:red;
+}
+
+dl{
+  font-family: arial;
+}
+
+ul{
+  color:blue;
+  list-style: square;
+}
+
+.Belso{
+  color:black;
+  list-style: disc;
+}
+
+.Belso2{
+  color:black
+}
