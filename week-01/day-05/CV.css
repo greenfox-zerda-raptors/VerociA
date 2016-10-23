@@ -1,0 +1,59 @@
+header{
+  width:1250px;
+  height: 400px;
+  background-image:url(https://images3.alphacoders.com/865/86507.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  opacity: .8;
+}
+
+#header_text{
+  position: relative;
+  top: 250px;
+  left: 270px;
+  font-family: Arial;
+  font-size: 2em;
+}
+
+#header_text h3, #header_text h1{
+  margin:0;
+}
+
+.szoveg{
+  width: 800px;
+  margin: 50px auto;
+  font-size: 20px;
+}
+
+.szoveg ul{
+  list-style-type: square;
+  margin-top: 20px;
+}
+
+.szoveg li{
+  padding: 3px 10px;
+}
+
+.idezet{
+  background-color: darkgrey;
+  font-size: 50px;
+  color: white;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.idezet p:first-child{
+  margin:0 auto;
+  position:relative;
+  text-align: left;
+  top:-10px;
+}
+
+.idezet p:nth-child(2){
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+  right:35px;
+}
