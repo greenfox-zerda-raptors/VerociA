@@ -1,0 +1,23 @@
+.boxes{
+  width: 300px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: justify;
+}
+
+p.one,p.two{
+  border-bottom: 2px solid black;
+  padding-bottom: 18px;
+}
+
+.one img{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float:left;
+}
+
+.two img{
+  margin-left: 20px;
+  margin-bottom: 20px;
+  float: right;
+}
