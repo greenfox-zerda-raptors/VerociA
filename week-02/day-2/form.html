@@ -1,0 +1,112 @@
+<!Doctype html>
+
+<html>
+
+<head>
+  <title> Profil form </title>
+  <link rel="stylesheet" type="text/css" href="form.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <form action="/collect-data-page" method="post">
+
+    <h2>Profil</h2>
+    <div id="topbox">
+      <div id="Personal">
+        <h3>Személyes adatok</h3>
+
+        <label for="name">Név:</label> <br>
+        <input type="text" id="name" name="user_name">
+
+        <div id="Yeargender">
+          <div id="Year">
+            <label for="year">Születési éved</label>
+            <input type="text" id="year" name="birth_year" placeholder="pl. 1984">
+          </div>
+          <div id="Gender">
+            Nemed
+            <div>
+              <input type="checkbox" id="genderfemale" name="gender_type" value="female">
+              <label for="genderfemale">nő
+                <input type="checkbox" id="gendermale" name="gender_type" value="male">
+                <label for="gendermale">férfi
+                </div>
+              </div>
+            </div>
+
+            <div id="All_brands">
+              Milyen márkákat szeretsz?
+              <p>
+              <div id="Brands1">
+                <input type="checkbox" id="brands" name="liked_brands" value="Adidas"><label for="brands">Adidas <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Apple"><label for="brands">Apple <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Coca-Cola"><label for="brands">Coca-cola <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Mazda"><label for="brands">Mazda <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Nike"><label for="brands">Nike <br>
+              </div>
+              <div id="Brands2">
+                <input type="checkbox" id="brands" name="liked_brands" value="Opel">Opel <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Ray-Ban">Ray-Ban <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Starbucks">Starbucks <br>
+                <input type="checkbox" id="brands" name="liked_brands" value="Tesla">Tesla <br>
+                <input type="checkbox" xid="brands" name="liked_brands" value="Yahoo">Yahoo <br>
+              </p>
+              </div>
+            </div>
+            <p>Többet is válszthatsz!</p>
+          </div>
+          <div id="Contact">
+            <h3>Kapcsolat</h3>
+            <div id="Tel">
+              <label for="tel">Telefonszám</label>
+              <input type="tel" id="tel" name="tel_number" placeholder="+36 -- --- ----">
+            </div>
+            <div id="Email">
+              <label for="mail">E-mail cím</label>
+              <input type="email" id="mail" name="e-mail_address" placeholder="nev@domain.hu">
+            </div>
+            <div id="Fb">
+              <label for="fb">Facebook profilod</label>
+              <input type="url" id="fb" name="fb_profile" placeholder="http://facebook.com/..">
+            </div>
+            <div id="Tw">
+              <label for="tw">Facebook profilod</label>
+              <input type="url" id="tw" name="tw_profile" placeholder="http://twitter.com/..">
+            </div>
+            <div id="House">
+              <label for="house">Milyen házban laksz?</label>
+              <input list="houses" id="house" name="house_type" placeholder="Válassz típust!">
+              <datalist id="houses">
+                <option value="Családi ház">
+                  <option value="Lakás">
+                  </datalist>
+                </div>
+              </div>
+
+              <div id="Intro">
+                Bemutatkozás
+                <textarea rows="8" cols="60" id="intro" name="introduction" placeholder="Írj magadról pár mondatot!"></textarea>
+              </div>
+
+              <div id="File">
+                <label for="CV">CV feltöltése</label>
+                <button type="button">FILE KIVÁLASZTÁSA</button>
+              </div>
+
+              <div id="licence">
+                <input type="checkbox" id="brands" name="liked_brands" value="Yahoo">Elfogadom a <a href="sla.txt">felhasználási feltételeket</a>
+              </div>
+
+              <div id="Save">
+                <button type="button">MENTÉS</button>
+              </div>
+
+              <div id="Clear">
+                <button type="button">ŰRLAP TŐRLÉSE</button>
+              </div>
+
+
+            </form>
+          </body>

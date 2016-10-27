@@ -1,0 +1,79 @@
+form{
+  width:800px;
+  height:1500px;
+  margin: 30px auto;
+  background-color: rgb(221, 214, 204);
+}
+
+#topbox{
+  padding-left: 80px;
+  padding-top: 30px;
+  color: rgb(77, 62, 98);
+
+}
+
+#Personal{
+  float: left;
+  width: 45%;
+}
+
+#Contact{
+width:45%;
+float: right;
+}
+
+#Contact:after{
+  content:"";
+  clear: both;
+  display: block;
+}
+h3{
+  background-color: purple;
+  color:white;
+
+}
+
+input{
+  width: 100%;
+
+}
+
+#Year{
+  float: left;
+  width:30%;
+}
+
+#Gender{
+  float: right;
+  width:67%;
+  display: inline-block;
+}
+#Gender input{
+  width: 15%
+}
+
+#All_brands{
+  text-align: left;
+  content:"";
+  display: block;
+  clear: both;
+}
+
+#Brands1{
+  float: right;
+  width:47%;
+}
+
+#Brands2{
+  float:right;
+  width:47%;
+}
+
+#Inro{
+display: block;
+float:left;
+}
+
+#All_brands input[type="checkbox"]{
+  width:auto;
+}
