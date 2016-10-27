@@ -1,7 +1,6 @@
 .container{
   display:flex;
   flex-wrap: nowrap;
-  /*height: 100px;*/
 }
 .row{
   flex-direction: row;
@@ -10,40 +9,47 @@
   flex-direction: column;
 }
 aside{
-  width: 100px;
-  background-color: gold;
-  height: 1000px;
+  min-width: 175px;
+  /*background-color: gold;*/
+  height: auto;
 }
 .rightside{
-  background-color: green;
+  /*background-color: green;*/
   flex-grow: 1;
-  width: 100%;
 }
 header{
   height: 5em;
-    background-color: aqua;
+  /*background-color: aqua;*/
 }
 
 footer{
   height: 5em;
-    background-color: red;
+  /*background-color: red;*/
 }
 
 article{
   flex-grow: 1;
-  background-color: purple;
-  height: 40px;
+  /*background-color: purple;*/
+  }
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  color:blue;
 }
 
 /*base end*/
 
-#user_head{
+/*Head start*/
+
+#User_head{
   display: flex;
   justify-content: flex-end;
 }
 
-
-#user_head li{
+#User_head li{
   list-style-type: none;
   padding:1px 5px;
   font-family: sans-serif;
@@ -62,4 +68,31 @@ article{
   font-family: sans-serif;
   font-size: 14px;
   display: inline-block;
+}
+
+#Read{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#Read li{
+  list-style-type: none;
+  padding:1px 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/*Head end*/
+/*Aside*/
+#Logo img{
+  height: 160px;
+  width: 160px;
+  object-fit: contain;
+}
+
+.Nested_list{
+  counter-reset: item;
+  list-style: none;
 }
