@@ -22,7 +22,7 @@ body{
 }
 
 a{
-  transform: rotateZ(-45deg);
+  transform: rotateZ(90deg);
   text-decoration: none;
   color:black;
   }
