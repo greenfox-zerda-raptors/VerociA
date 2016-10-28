@@ -12,6 +12,7 @@ aside{
   min-width: 175px;
   /*background-color: gold;*/
   height: auto;
+  background-color: #f9f9f9;
 }
 .rightside{
   /*background-color: green;*/
@@ -20,6 +21,7 @@ aside{
 header{
   height: 5em;
   /*background-color: aqua;*/
+  background-color: #f9f9f9;
 }
 
 footer{
@@ -30,19 +32,29 @@ footer{
 article{
   flex-grow: 1;
   /*background-color: purple;*/
+  margin-left:15px;
+  font-family: sans-serif;
   }
 
 a{
   text-decoration: none;
+  font-family: sans-serif;
+  font-size: 88%;
+  color: #0645ad;
 }
 
 a:visited{
-  color:blue;
+  color: #0645ad;
 }
 
 /*base end*/
 
 /*Head start*/
+
+#Second_row{
+  display: flex;
+  justify-content: space-between;
+}
 
 #User_head{
   display: flex;
@@ -53,8 +65,8 @@ a:visited{
   list-style-type: none;
   padding:1px 5px;
   font-family: sans-serif;
-  font-size: 14px;
-  display: inline-block;
+  font-size: 88%;
+  /*display: inline-block;*/
 }
 
 #Art_talk{
@@ -73,7 +85,6 @@ a:visited{
 #Read{
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
 }
 
 #Read li{
@@ -83,6 +94,7 @@ a:visited{
   font-size: 14px;
   display: inline-block;
 }
+
 
 /*Head end*/
 /*Aside*/
@@ -96,3 +108,71 @@ a:visited{
   counter-reset: item;
   list-style: none;
 }
+
+ul{
+  list-style: none;
+  padding-left: 10px;
+  font-size: 88%;
+}
+
+
+
+/*Aside end*/
+/*Article start*/
+
+p{
+  font-family: sans-serif;
+  font-size:14px;
+  font-weight: normal;
+  text-align: justify;
+}
+
+h1, h2, h3, h4{
+  font-weight: normal;
+}
+
+table{
+  width:270px;
+  height:500px;
+  float:right;
+  border: 1px solid #aaa;
+  border-spacing: 3px;
+  background-color: #f9f9f9;
+  color: black;
+  margin: 0.5em 0 0.5em 1em;
+  padding: 0.2em;
+  clear: right;
+  font-size: 75%;
+  line-height: 1.5em;
+  }
+
+thead td{
+  text-align: center;
+}
+
+table img{
+  width:220px;
+  height:277px;
+}
+
+ol{
+  font-family: sans-serif;
+  font-size: 100%;
+  color: #0645ad;
+  padding-left: 14px;
+}
+
+ol ol{
+  font-size: 100%;
+}
+
+.Content{
+  width:122px;
+  height:262px;
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+  padding: 7px;
+  font-size: 95%;
+}
+
+/*Article end*/
