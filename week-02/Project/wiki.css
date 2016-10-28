@@ -2,12 +2,7 @@
   display:flex;
   flex-wrap: nowrap;
 }
-.row{
-  flex-direction: row;
-}
-.col{
-  flex-direction: column;
-}
+
 aside{
   min-width: 175px;
   /*background-color: gold;*/
