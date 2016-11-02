@@ -19,12 +19,15 @@ body{
   transform: rotateZ(45deg);
   flex-direction: column;
   justify-content: center;
+  border-radius: 5px;
 }
 
 a{
   transform: rotateZ(90deg);
   text-decoration: none;
   color:black;
+  box-sizing: border-box;
+  padding-top: 30px;
   }
 
 a:hover{
@@ -36,11 +39,13 @@ a:hover{
   width:80px;
   height:80px;
   border:2px solid orange;
+  border-radius: 5px;
   transition: transform 1s;
-  transform: rotateZ(45deg);
+  transform: rotateZ(-45deg);
+
 }
 
 
 #frame:hover{
-  transform: rotateZ(90deg);
+  transform: rotateZ(0deg);
 }
