@@ -1,0 +1,18 @@
+/**
+ * Created by Verőci Ádám on 2016.11.07..
+ */
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class Workshop11 {
+    public static void main(String[] args) {
+        String[] ah = new String[] { "kuty", "macsk", "cic"};
+        // add to all elements an 'a' on the end
+
+    for (int i=0; i<ah.length; i++) {
+        ah[i]= ah[i] + "a";
+    }
+
+        System.out.println(Arrays.toString(ah));
+    }
+}
