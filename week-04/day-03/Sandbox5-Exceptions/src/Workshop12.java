@@ -116,7 +116,7 @@ public class Workshop12 {
             fileName.toString();
         };
 
-/**  ONLY DO THIS ONCE YOU ARE 100% SURE that the variables are pointing to the test files!!!
+/**  ONLY  DO THIS ONCE YOU ARE 100% SURE that the variables are pointing to the test files!!!
  *
  // You call delete to delete a file
  if(randomFile.delete()){  //this will be the file written to the current directory

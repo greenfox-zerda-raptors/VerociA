@@ -19,19 +19,46 @@ public class Workshop04{
 
         int a[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8};
         String two = "2";
-
+        try {
         System.out.println("Testing ...");
-        a[2] = a[3]/a[0];
+
+            a[2] = a[3] / a[0];
+        }
+        catch(ArithmeticException e){
+        }
         System.out.println("Past hurdle 1");
-        a[9] = Integer.parseInt(two);
-        System.out.println("Past hurdle 2");
-        a[10] = Integer.parseInt("ten");
+        try {
+            a[9] = Integer.parseInt(two);
+        }
+        catch(IndexOutOfBoundsException e) {
+        }
+            System.out.println("Past hurdle 2");
+        try {
+            a[10] = Integer.parseInt("ten");
+        }
+        catch(NumberFormatException e){
+
+        }
         System.out.println("Past hurdle 3...  And I realized perhaps I'm wrong");
-        a[10] = 10;
+        try{
+            a[10] = 10;
+        }
+        catch(IndexOutOfBoundsException e){
+
+        }
         System.out.println("Past hurdle 4");
-        two = "two";
+            two = "two";
+
         System.out.println("Past hurdle 5");
-        a[9] = Integer.parseInt(two);
+        try{
+            a[9] = Integer.parseInt(two);
+        }
+        catch(NumberFormatException e){
+
+        }
+        catch(IndexOutOfBoundsException e){
+
+        }
 
 
         System.out.println("*** FINISH LINE ***");
