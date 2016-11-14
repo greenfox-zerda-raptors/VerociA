@@ -53,10 +53,14 @@
             kmOdometer = kmOdometer + x;
             if (x<20){
                 System.out.println("Brrrm, "+ getTypeCar() +" just drove around town " + x + " clicks.");
-            }   else if(x>50) {
-                System.out.println("Brrrm, screech, brrrm, screech "+ getTypeCar() + " commuted " + x + " clicks.");
-                }   else {
-                System.out.println("Whee, " + getTypeCar() + " " + x + " clicks.");
+            }   else if(x>50){
+                    System.out.println("Brrrm, screech, brrrm, screech "+ getTypeCar() + " commuted " + x + " clicks.");
+                }   else{
+                        System.out.println("Whee, " + getTypeCar() + " " + x + " clicks.");
                     }
+        }
+
+        static String toString(Car y) {
+            return "This " +y.getTypeCar()+" is "+y.getColor()+", has "+y.getEngineSize()+" cc engine and clocked "+y.getKmOdometer()+" km's.";
         }
     }

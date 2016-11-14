@@ -34,6 +34,10 @@ public class Workshop01 {
 
         System.out.printf("This %s is %s, has %d cc engine and clocked %d km's\n",
                 myCar3.getTypeCar(), myCar3.getColor(), myCar3.getEngineSize(), myCar3.getKmOdometer());
+
+        System.out.println(Car.toString(myCar));
+        System.out.println(Car.toString(myCar2));
+        System.out.println(Car.toString(myCar3));
     }
 }
 
