@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 /**
  * Created by Verőci Ádám on 2016.11.14..
  */
@@ -45,8 +47,16 @@ public class Car {
         //Add somethings here to create a car and some fields
         this.engineSize = 1600;
         this.color = "red";
+    }
 
-
-
+    void drive(int x) {
+        kmOdometer = kmOdometer + x;
+        if (x<20){
+            System.out.println("Brrrm, "+ getTypeCar() +" just drove around town " + x + " clicks.");
+        }else if(x>50) {
+            System.out.println("Brrrm, screech, brrrm, screech "+ getTypeCar() + " commuted " + x + " clicks.");
+        }else {
+            System.out.println("Whee, " + getTypeCar() + " " + x + " clicks.");
+        }
     }
 }

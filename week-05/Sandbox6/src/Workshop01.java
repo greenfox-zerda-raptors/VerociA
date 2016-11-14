@@ -8,6 +8,7 @@ public class Workshop01 {
 
         myCar.setTypeCar("Mazda");
         myCar.setKmOdometer(12312);
+        myCar.drive(15);
 
         Car myCar2 = new Car();
 
@@ -15,7 +16,7 @@ public class Workshop01 {
         myCar2.setEngineSize(2500);
         myCar2.setTypeCar("Ford");
         myCar2.setKmOdometer(152312);
-
+        myCar2.drive(1200);
 
         Car myCar3 = new Car();
 
@@ -23,6 +24,7 @@ public class Workshop01 {
         myCar3.setEngineSize(2800);
         myCar3.setTypeCar("Beamer");
         myCar3.setKmOdometer(42521);
+        myCar3.drive(49);
 
         System.out.printf("This %s is %s, has %d cc engine and clocked %d km's\n",
                 myCar.getTypeCar(), myCar.getColor(), myCar.getEngineSize(), myCar.getKmOdometer());
@@ -32,7 +34,6 @@ public class Workshop01 {
 
         System.out.printf("This %s is %s, has %d cc engine and clocked %d km's\n",
                 myCar3.getTypeCar(), myCar3.getColor(), myCar3.getEngineSize(), myCar3.getKmOdometer());
-
     }
 }
 
