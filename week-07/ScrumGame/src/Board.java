@@ -1,7 +1,11 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static java.awt.event.KeyEvent.*;
@@ -14,12 +18,16 @@ public class Board extends JComponent implements KeyListener {
 //    File dir = new File(dirPath);
 //    String file = dir + "\\Images\\" + "floor.png";
 
-
+    int [][] map;
+    BufferedImage upImage;
+    BufferedImage downImage;
+    BufferedImage leftImage;
+    BufferedImage rightImage;
 
     ArrayList<GameObject> gameObjects;
 
     public Board() {
-        int[][] map = new int[][]{
+        this.map = new int[][]{
                 {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},
                 {0, 0, 0, 1, 0, 1, 0, 1, 1, 0},
                 {0, 1, 1, 1, 0, 1, 0, 1, 1, 0},
@@ -33,8 +41,6 @@ public class Board extends JComponent implements KeyListener {
                 {0, 1, 0, 1, 0, 1, 0, 0, 0, 0}
         };
 
-        int velX, velY;
-
         gameObjects = new ArrayList<>();
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
@@ -47,10 +53,21 @@ public class Board extends JComponent implements KeyListener {
         }
 
         // set the si ze of your draw board
-        setPreferredSize(new Dimension(720, 792));
-        setVisible(true);
+        setPreferredSize(new Dimension(720, 800));
+
+        try {
+            upImage = ImageIO.read(new File("C:\\Users\\Verőci Ádám\\IdeaProjects\\ScrumGame\\src\\pics\\hero-up.png"));
+            downImage = ImageIO.read(new File("C:\\Users\\Verőci Ádám\\IdeaProjects\\ScrumGame\\src\\pics\\hero-down.png"));
+            leftImage = ImageIO.read(new File("C:\\Users\\Verőci Ádám\\IdeaProjects\\ScrumGame\\src\\pics\\hero-left.png"));
+            rightImage = ImageIO.read(new File("C:\\Users\\Verőci Ádám\\IdeaProjects\\ScrumGame\\src\\pics\\hero-right.png"));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
+    Skeleton skeletonOne = new Skeleton();
+    Skeleton skeletonTwo = new Skeleton();
+    Boss boss= new Boss();
     Hero hero = new Hero();
 
     @Override
@@ -61,6 +78,9 @@ public class Board extends JComponent implements KeyListener {
         for (GameObject gameObject : gameObjects) {
             gameObject.draw(graphics);
 
+            skeletonOne.draw(graphics);
+            skeletonTwo.draw(graphics);
+            boss.draw(graphics);
             hero.draw(graphics);
         }
     }
@@ -74,16 +94,20 @@ public class Board extends JComponent implements KeyListener {
         int key = e.getKeyCode();
         switch(key){
             case VK_LEFT:
-                hero.move(0,-1);
+                hero.imageChanger(leftImage);
+                hero.move(-1, 0, map);
                 break;
             case VK_RIGHT:
-                hero.move(0,1);
+                hero.imageChanger(rightImage);
+                hero.move(1, 0, map);
                 break;
             case VK_UP:
-                hero.move(-1,0);
+                hero.imageChanger(upImage);
+                hero.move(0, -1, map);
                 break;
             case VK_DOWN:
-                hero.move(1,0);
+                hero.imageChanger(downImage);
+                hero.move(0, 1, map);
                 break;
         }
         revalidate();

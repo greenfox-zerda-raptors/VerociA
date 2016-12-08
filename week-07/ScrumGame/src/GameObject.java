@@ -25,7 +25,11 @@ public class GameObject {
 
     public void draw(Graphics graphics) {
         if (image != null) {
-            graphics.drawImage(image, posY * 72, posX * 72, null);
+            graphics.drawImage(image, posX * 72, posY * 72, null);
         }
     }
+    public void imageChanger(BufferedImage filename) {
+        this.image = filename;
+    }
+
 }
