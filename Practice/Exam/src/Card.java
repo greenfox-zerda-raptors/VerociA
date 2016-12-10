@@ -12,13 +12,12 @@ public class Card {
         this.value = value;
     }
 
-
-    @Override
-    public String toString(){
-        return (this.color+" "+this.value);
-    }
-
     public int getValue() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+       return color + " " + value;
     }
 }

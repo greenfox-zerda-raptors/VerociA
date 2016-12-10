@@ -5,7 +5,7 @@ import java.util.Collections;
  * Created by Verőci Ádám on 2016.12.09..
  */
 public class Deck {
-    public ArrayList<Card> cards = new ArrayList<Card>();
+    ArrayList<Card> cards = new ArrayList<Card>();
     ArrayList<Card> used = new ArrayList<Card>();
 
     public Deck() {
@@ -18,28 +18,17 @@ public class Deck {
             }
         }
         Collections.shuffle(cards);
-        System.out.println(cards);
-        System.out.println(draw());
-        addToUsed();
-        remove();
-        System.out.println(used);
-        System.out.println(cards);
     }
 
     public Card draw(){
-        if(cards.size()!=0) {
-            return cards.get(0);
+        if(cards.size() > 0) {
+            Card drawn=cards.get(0);
+            cards.remove(drawn);
+            used.add(drawn);
+            return drawn;
         } else{
             return null;
         }
-    }
-
-    public void addToUsed(){
-        used.add(cards.get(0));
-    }
-
-    public void remove(){
-        cards.remove(0);
     }
 }
 

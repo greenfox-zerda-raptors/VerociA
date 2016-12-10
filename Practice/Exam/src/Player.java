@@ -9,11 +9,25 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        Player User = new Player("User");
-        Player Dealer = new Player("Dealer");
         played = new ArrayList<>();
     }
 
-    public void addToPlayed(){
+    public void addToPlayed(Card drawn){
+        played.add(drawn);
+    }
+
+    int sum;
+    public int sumOfPlayed(){
+        for(Card drawn : played){
+            sum+= drawn.getValue();
+        }return sum;
+    }
+
+    public String toString() {
+        String labelString = name + " played: ";
+        for (Card drawn : played) {
+            labelString += " " + drawn.toString();
+        }
+        return labelString;
     }
 }
