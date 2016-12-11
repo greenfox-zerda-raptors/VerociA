@@ -3,11 +3,16 @@
  */
 public class Account {
     int id;
+    String accountType;
     float balance;
+    boolean result;
+    String [] userInfo = {"firstname", "lastname", "address"};
 
-    public Account(int id, float balance) {
+    public Account(int id, String accountType, float balance, String[] userInfo) {
         this.id = id;
+        this.accountType = accountType;
         this.balance = 0;
+        this.userInfo = userInfo;
     }
 
     public float getBalance(){
@@ -19,8 +24,11 @@ public class Account {
         return balance;
     }
 
-    public float withdraw(float moneyOut){
+    public float withdraw(float moneyOut) {
         balance -= moneyOut;
         return balance;
+    }
+
+    public void audit(int id) {
     }
 }
