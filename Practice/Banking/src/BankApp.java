@@ -13,8 +13,13 @@ public class BankApp {
         Account savingAccount = new SavingsAccount(2,"", 0, new String []{"Krisztina", "Szabo", "cim2"});
         savingAccount.deposit(50);
         System.out.println(savingAccount.getBalance());
-        System.out.println(savingAccount.getBalance());
         savingAccount.audit(2);
 
+        Account moneyAccount = new MoneyMarketAccount(3,"", 0, new String []{"Jozsef", "Kovacs", "cim3"});
+        moneyAccount.deposit(5000);
+        System.out.println(moneyAccount.getBalance());
+        moneyAccount.withdraw(5000);
+        System.out.println(moneyAccount.getBalance());
+        moneyAccount.audit(3);
     }
 }
