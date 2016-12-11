@@ -13,5 +13,6 @@ public class BattleApp {
         System.out.println(ship.score());
         System.out.println(royal.score());
         ship.battle(royal);
+        System.out.println("There are " + ship.leftoverPirates() + " pirates left on the ship.");
     }
 }

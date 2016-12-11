@@ -28,18 +28,27 @@ public class Ship {
 
 
     public int score(){
-        int score= alive - captain.getRumLevel();
-        return score;
+        int points= alive - captain.getRumLevel();
+        return points;
     }
 
     public boolean battle (Ship royalShip){
         if (this.score() > royalShip.score()) {
             System.out.println("Hurrraaayyy, we won!");
             return true;
+        } else {
+            for (int i = 0; i < random.nextInt(pirates.size()); i++) {
+                pirates.get(i).die();
+            }
+            System.out.println("The Royal navy won...");
+            return false;
         }
-        captain.die();
-        System.out.println("The Royal navy won...");
-        return false;
     }
 
+    int rest;
+    public int leftoverPirates(){
+        for(int i=0; i<pirates.size(); i++) {
+            rest += pirates.get(i).count();
+        }   return rest;
+    }
 }

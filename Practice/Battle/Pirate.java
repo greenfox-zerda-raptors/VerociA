@@ -33,6 +33,13 @@ public class Pirate {
         return isAlive;
     }
 
+    int counter;
+    public int count(){
+        if(isAlive()){
+            counter++;
+        }return counter;
+    }
+
     public int getRumLevel() {
         return rumLevel;
     }
