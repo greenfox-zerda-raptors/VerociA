@@ -31,4 +31,9 @@ public class Account {
 
     public void audit(int id) {
     }
+
+    public void transfer(float amount, Account To){
+        this.balance -= amount;
+        To.balance += amount;
+    }
 }

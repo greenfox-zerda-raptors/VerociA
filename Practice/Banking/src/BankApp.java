@@ -18,8 +18,12 @@ public class BankApp {
         Account moneyAccount = new MoneyMarketAccount(3,"", 0, new String []{"Jozsef", "Kovacs", "cim3"});
         moneyAccount.deposit(5000);
         System.out.println(moneyAccount.getBalance());
-        moneyAccount.withdraw(5000);
+        moneyAccount.withdraw(1500);
         System.out.println(moneyAccount.getBalance());
         moneyAccount.audit(3);
+
+        moneyAccount.transfer(2000, savingAccount);
+        System.out.println(moneyAccount.getBalance());
+        System.out.println(savingAccount.getBalance());
     }
 }
