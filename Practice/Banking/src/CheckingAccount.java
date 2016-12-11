@@ -12,9 +12,8 @@ public class CheckingAccount extends Account {
     @Override
     public void audit(int id) {
         if (balance < 0) {
-            System.out.println("This is a " + result + " checking account");
-        }else{
-            System.out.println("This is a " + result + " checking account");
+            result = true;
         }
+        System.out.println("This is a " + result + " checking account");
     }
 }

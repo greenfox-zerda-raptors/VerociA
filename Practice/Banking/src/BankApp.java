@@ -3,12 +3,18 @@
  */
 public class BankApp {
     public static void main(String[] args) {
-        Account account = new CheckingAccount(1,"", 0, new String []{"Adam", "Bela", "cim"});
-        account.deposit(100);
-        System.out.println(account.getBalance());
-        account.withdraw(20);
-        System.out.println(account.getBalance());
-        account.audit(1);
+        Account checkingAccount = new CheckingAccount(1,"", 0, new String []{"Adam", "Bela", "cim"});
+        checkingAccount.deposit(100);
+        System.out.println(checkingAccount.getBalance());
+        checkingAccount.withdraw(20);
+        System.out.println(checkingAccount.getBalance());
+        checkingAccount.audit(1);
+
+        Account savingAccount = new SavingsAccount(2,"", 0, new String []{"Krisztina", "Szabo", "cim2"});
+        savingAccount.deposit(50);
+        System.out.println(savingAccount.getBalance());
+        System.out.println(savingAccount.getBalance());
+        savingAccount.audit(2);
 
     }
 }
