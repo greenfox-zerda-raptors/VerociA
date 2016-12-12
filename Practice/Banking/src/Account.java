@@ -1,7 +1,7 @@
 /**
  * Created by Verőci Ádám on 2016.12.11..
  */
-public class Account {
+public abstract class Account {
     int id;
     String accountType;
     float balance;
@@ -29,8 +29,7 @@ public class Account {
         return balance;
     }
 
-    public void audit(int id) {
-    }
+    public abstract void audit(int id);
 
     public void transfer(float amount, Account To){
         this.balance -= amount;
