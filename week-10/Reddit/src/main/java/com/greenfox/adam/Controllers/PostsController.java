@@ -27,17 +27,17 @@ public class PostsController {
 
     @RequestMapping(value = "/posts/add", method = RequestMethod.GET)
     public String add(Model model){
-        model.addAttribute("posts", new Post());
+        model.addAttribute("post", new Post());
         return "add";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/posts/add", method = RequestMethod.POST)
     public String addPosts(@ModelAttribute Post post){
         repository.save(post);
         return "redirect:/posts";
     }
 
-    @RequestMapping(value = "/{id}/upvote")
+    @RequestMapping(value = "/posts/{id}/upVote")
     public String upVote(@PathVariable("id") int id) {
         Post post = repository.findOne(id);
         post.plus();
@@ -45,12 +45,11 @@ public class PostsController {
         return "redirect:/posts";
     }
 
-    @RequestMapping(value = "/{id}/downvote")
+    @RequestMapping(value = "/posts/{id}/downVote")
     public String downVote(@PathVariable("id") int id) {
         Post post = repository.findOne(id);
         post.minus();
         repository.save(post);
         return "redirect:/posts";
     }
-
 }

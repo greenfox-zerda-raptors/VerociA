@@ -6,16 +6,20 @@ import org.springframework.data.annotation.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Table;
 
 /**
  * Created by Verőci Ádám on 2017.01.08..
  */
-@Entity(name = "t_reddit")
+
+@Entity
+@Table(name = "t_reddit")
 public class Post {
 
-    @Id
+    @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private int score;
     private String content;
 
@@ -28,15 +32,19 @@ public class Post {
     }
 
     public void plus(){
-        score++;
+        this.score++;
     }
 
     public void minus(){
-        score--;
+        this.score--;
     }
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getScore() {
