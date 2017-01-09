@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Posts</title>
+</head>
+<body>
+    <a href="http://localhost:8080/posts/add">Add a new post</a>
+    <h1>Posts</h1>
+    <table>
+        <thead>
+        <th>Score</th>
+        <th>Actions</th>
+        <th>Content</th>
+        </thead>
+        <tbody>
+        <tr th:each="post:${posts}">
+            <td th:text="${post.score}">0</td>
+            <td>
+                <a th:href="@{'/posts/' +${post.id} + '/upVote'}">+</a>
+                <a th:href="@{'/posts/' +${post.id} + '/downVote'}">-</a></td>
+            <td th:text="${post.content}">first</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
