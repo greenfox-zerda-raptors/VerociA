@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Content</title>
+</head>
+<body>
+<a href="http://localhost:8080/posts/">Back to posts</a>
+<h1 th:text="${addedPost.title}"></h1>
+<p th:text="${addedPost.content}">
+</p>
+</body>
+</html>

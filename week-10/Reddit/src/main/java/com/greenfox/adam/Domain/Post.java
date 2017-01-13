@@ -19,12 +19,13 @@ public class Post {
     private int id;
 
     private int score;
+    private String title;
     private String content;
 
     public Post() {
     }
 
-    public Post(int score, String content) {
+    public Post(int score, String title, String content) {
         this.score = score;
         this.content = content;
     }
@@ -59,5 +60,13 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

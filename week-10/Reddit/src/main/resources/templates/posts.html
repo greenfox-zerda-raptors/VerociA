@@ -11,15 +11,18 @@
         <thead>
         <th>Score</th>
         <th>Actions</th>
-        <th>Content</th>
+        <th>Title</th>
         </thead>
         <tbody>
         <tr th:each="post:${posts}">
             <td th:text="${post.score}">0</td>
             <td>
                 <a th:href="@{'/posts/' +${post.id} + '/upVote'}">+</a>
-                <a th:href="@{'/posts/' +${post.id} + '/downVote'}">-</a></td>
-            <td th:text="${post.content}">first</td>
+                <a th:href="@{'/posts/' +${post.id} + '/downVote'}">-</a>
+            </td>
+            <td>
+                <a th:href="@{'/posts/' +${post.id} + '/content'}" th:text="${post.title}"></a>
+            </td>
         </tr>
         </tbody>
     </table>

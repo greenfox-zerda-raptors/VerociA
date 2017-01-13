@@ -20,7 +20,7 @@ public class PostService {
     }
 
     public List<Post> getAllPosts() {
-        return (List<Post>) repository.findAll();
+        return (List<Post>) repository.findAllByOrderByScoreDesc();
     }
 
     public void savePost(Post post) {
@@ -38,4 +38,10 @@ public class PostService {
         post.minus();
         repository.save(post);
     }
+
+    public Post getPostForArticle(int id){
+        Post post = repository.findOne(id);
+        return post;
+    }
+
 }
