@@ -1,0 +1,1 @@
+ALTER TABLE troop ADD isAlive BIT;
